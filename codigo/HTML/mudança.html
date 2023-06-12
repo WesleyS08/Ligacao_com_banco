@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente</title>
+    <style>
+        /* Importação de fontes para ser usado no projeto */
+        /* Esses são elementros que pegam em todo o html, ou seja elementos globais*/
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            color: #d1d0cf;
+            background: #202124;
+        }
+
+        /* linha onde os elesmentos se encontram, cujo pode ser muda do ou apagado */
+        .container {
+            width: 500px;
+            height: 500px;
+            border-radius: 15px;
+            align-items: center;
+            display: flex;
+            margin-top: 2%;
+            margin-left: 28%;
+            display: grid;
+            grid-gap: 10px;
+            flex-wrap: nowrap;
+            flex-direction: column-reverse;
+            align-content: center;
+            justify-content: space-around;
+
+        }
+
+        button {
+            position: relative;
+            background-color: rgb(230, 34, 77);
+            border-radius: 5px;
+            box-shadow: rgb(121, 18, 55) 0px 4px 0px 0px;
+            background-repeat: no-repeat;
+            box-sizing: border-box;
+            width: 96px;
+            height: 24px;
+            color: #fff;
+            border: none;
+            margin-left: 35%;
+            font-size: 20px;
+            transition: all .3s ease-in-out;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: "";
+            background-color: rgb(248, 50, 93);
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            transition: width 700ms ease-in-out;
+            display: inline-block;
+        }
+
+        button:hover::before {
+            width: 100%;
+        }
+
+        .btn {
+
+            background-color: #868991;
+            scale: 1rem;
+        }
+
+        .btn-primary:houver {
+            scale: 1.2rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- Só btn mesmo para levar para outras paginas-->
+    <div class="container">
+        <a href="../index.html">
+            <button type="button" class="button">
+                <span class="button__text">Voltar</span>
+            </button>
+        </a>
+        <a href="../php/deletarprodutos.php">
+            <button type="button" class="button">
+                <span class="button__text">Deletar produtos</span>
+
+            </button>
+        </a>
+        <a href="../php/atualizarprodutos.php">
+            <button type="button" class="button">
+                <span class="button__text">Atualizar produtos</span>
+
+            </button>
+        </a>
+</body>
+
+</html>
